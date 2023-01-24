@@ -10,10 +10,11 @@ export const FILTERAZ = 'FILTERAZ'
 export const GET_ACTS = 'GET_ACTS'
 export const NOT_FOUND = 'NOT_FOUND'
 
+const url = 'https://countries.up.railway.app';
+
 
 export function getCountries (title){
     
-    const url = 'https://countries.up.railway.app'
 
     if(title){
        return async function (dispatch){

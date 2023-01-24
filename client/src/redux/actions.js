@@ -12,11 +12,13 @@ export const NOT_FOUND = 'NOT_FOUND'
 
 
 export function getCountries (title){
+    
+    const url = 'https://countries.up.railway.app'
 
     if(title){
        return async function (dispatch){
-          try {                             // https://countriesa-d.herokuapp.com/countries?name=${title}
-               const res = await axios.get(`https://countriesa-d.herokuapp.com/countries?name=${title}`); 
+          try {                            
+               const res = await axios.get(`${url}/countries?name=${title}`); 
               
                if(res.data.status === 404){
                  dispatch({ type: NOT_FOUND, payload: true });
@@ -33,8 +35,8 @@ export function getCountries (title){
  }
 
  export function getDetail(idPais){
-    return async function (dispatch){  //https://countriesa-d.herokuapp.com/countries/${idPais}
-       const data = await fetch(`https://countriesa-d.herokuapp.com/countries/${idPais}`)
+    return async function (dispatch){  
+       const data = await fetch(`${url}/countries/${idPais}`)
        const info = await data.json()
        return dispatch({ type: GET_DETAILS, payload: info })
     }        
@@ -42,8 +44,8 @@ export function getCountries (title){
 
  export function getAll (){
   return async function (dispatch){
-         try {                          //https://countriesa-d.herokuapp.com/countries
-              const res = await axios.get(`https://countriesa-d.herokuapp.com/countries`);
+         try {                         
+              const res = await axios.get(`${url}/countries`);
               return dispatch({ type: GET_All, payload: res.data });
           } catch (err) {
               return console.error(err);
@@ -58,8 +60,8 @@ export function getCountries (title){
 
  export function postAcitvity  (payload){
  return function  (dispatch){
-    try {                       // https://countriesa-d.herokuapp.com/activity
-        const res =   axios.post("https://countriesa-d.herokuapp.com/activity", payload);
+    try {                       
+        const res =   axios.post(`${url}/activity`, payload);
          return res
     } catch (err) {
         return console.error(err);
@@ -70,8 +72,8 @@ export function getCountries (title){
 
  export function  getActs(){
     return async function(dispatch){
-       try {                            //https://countriesa-d.herokuapp.com/activities
-           const res = await axios.get("https://countriesa-d.herokuapp.com/activities")
+       try {                            
+           const res = await axios.get(`${url}/activities`)
            return dispatch({ type: GET_ACTS, payload: res.data })
        } catch (error) {
            console.log(error)

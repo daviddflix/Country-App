@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import {useDispatch, useSelector} from 'react-redux'
-import { filterAz, getAll } from "../../redux/actions"
+import { filterAz } from "../../redux/actions"
 import {NavLink} from 'react-router-dom'
 import s from './home.module.css'
 import { Nav } from "../barra/barra"
@@ -45,11 +45,11 @@ const handleAz = (e)=> {
 
 
 
-useEffect(()=>{
-  if(!paises.length && notFound === false){
-    dispatch(getAll())
-  }
-})
+// useEffect(()=>{
+//   if(!paises.length && notFound === false){
+//     dispatch(getAll())
+//   }
+// })
 
 
 

@@ -36,31 +36,26 @@
   width: 250px;
 }
 
-.input{
+/* .input{
   outline: none;
   padding: 12px;
   border-radius: 25px 0 0 25px;
   width: 66%;
   font-size: 1rem;
   border: none;
-}
+} */
 
-.boton{
+/* .boton{
   padding: 12px;
   border-radius: 0 25px 25px 0;
   font-size: 1rem;
   border: none;
   background-color: #29bf12;
-}
+} */
 
 h1{
   color: black;
   font-family: 'Montserrat', sans-serif;
-}
-
-.boton:hover{
-  background-color: black;
-  color: white;
 }
 
 .containerFlags{
@@ -141,7 +136,7 @@ h1{
     font-size: 15px;
   }
  
-  .input{
+  /* .input{
     outline: none;
     padding: 12px;
     border-radius: 25px 0 0 25px;
@@ -149,16 +144,9 @@ h1{
     font-size: .9rem;
     border: none;
     
-  }
+  } */
 
-  .boton{
-    padding: 12px;
-    border-radius: 0 25px 25px 0;
-    font-size: .9rem;
-    border: none;
-    background-color: #29bf12;
-  }
-  
+
 
   
 }

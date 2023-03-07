@@ -1,44 +1,43 @@
-import {  useState } from "react";
+import { useEffect, useState } from "react";
+import { CiSearch } from "react-icons/ci";
 import { useDispatch } from "react-redux";
 import { getCountries } from "../../redux/actions";
-import s from '../home/home.module.css'
+import s from "../barra/barra.module.css";
 
-export function SearchBar(){
-
+export function SearchBar() {
+  const [valor, setValor] = useState("");
  
-  
-    const [valor, setValor] = useState("")
-    const dispatch = useDispatch()
-   
+  const dispatch = useDispatch(); 
 
-
-    const handleSubmit = (e) =>  {
+  const handleKeyPressed = (e) => {
+    if (e.key === "Enter") {
       e.preventDefault();
-      dispatch(getCountries(valor))
-      setValor("")
-   }
-    const handleKeyPressed = (e) =>  {
-      if(e.key === 'Enter'){
-        e.preventDefault();
-        dispatch(getCountries(valor))
-        setValor("")
-      }
-  
-   }
+      dispatch(getCountries(valor));
+      setValor("");
+    }
+  };
 
+  useEffect(() => {
+    dispatch(getCountries(valor));
    
+  }, [valor, dispatch])
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    setValor(e.target.value);
+  };
 
- const handleChange = (e) =>  {
-   e.preventDefault();
-   setValor(e.target.value);
-   
- }
- 
-     return(
-        <div className={s.buscador} >
-        <input className={s.input} id='valor' onKeyPress={handleKeyPressed} placeholder="Search for a country"  valor={valor} onChange={(e) => handleChange(e)} />
-        <button className={s.boton} onClick={handleSubmit} >Search</button>
-     </div>
-     )
+  return (
+    <div className={s.mainContainerSearcbar}>
+      <input
+        className={s.input}
+        id="valor"
+        onKeyDown={handleKeyPressed}
+        placeholder="Enter a country name..."
+        valor={valor}
+        onChange={(e) => handleChange(e)}
+      />
+       <CiSearch className={s.SearchIcon}/>
+    </div>
+  );
 }

@@ -1,70 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-*{
-  
-  padding: 0;
-  box-sizing: border-box;
+.containerFlags{
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-
-
 .container{
-    display: inline-block;
-    padding: 10px;
     margin: 1rem;
-    border-radius: 24px 4px;
-    border: 1px solid rgb(146, 114, 114);
+    padding: 1rem;
+    border-radius: 5px;
     transition: all .2s ease;
-    padding-bottom: 10px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-self: center;
-    background-color: #e5e5e5;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .container:hover{
   transform: scale(1.1);
 }
 
-.title{
+.subContainer{
   text-decoration: none;
-  font-size: 5px;
+}
+
+.title{
+  font-size: 1.2em;
+  color: #282828;
+  margin: 0.4em;
 }
 
 .imagen{
-  height: 170px;
-  width: 250px;
+  height: 150px;
+  width: 230px;
 }
-
-/* .input{
-  outline: none;
-  padding: 12px;
-  border-radius: 25px 0 0 25px;
-  width: 66%;
-  font-size: 1rem;
-  border: none;
-} */
-
-/* .boton{
-  padding: 12px;
-  border-radius: 0 25px 25px 0;
-  font-size: 1rem;
-  border: none;
-  background-color: #29bf12;
-} */
-
-h1{
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.containerFlags{
-  height: 100vh;
-  margin-bottom: 3rem;
-}
-
-
-
 
 .loader {
   border: 16px solid #f3f3f3;
@@ -98,6 +66,7 @@ h1{
  align-items: center;
  position: relative;
  top: 10rem;
+
 }
 
 
@@ -108,45 +77,14 @@ h1{
   }
 
 
-  .container{
-    /* display: inline-block; */
-     flex-wrap: wrap; 
-    border-radius: 24px 4px;
-    border: 1px solid rgb(146, 114, 114);
-    transition: all .2s ease;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-self: center;
-    background-color: #e5e5e5;
-    width: 150px;
-   
+ 
+.notfound{
+  font-size: 1em;
+}
 }
 
-
-  .containerFlags{
-    height: 60vh;
-    margin-bottom: 25rem;
-    flex-wrap: wrap;
+@media screen and (max-width:400px){
+  .notfound{
+    font-size: 0.6em;
   }
-  
-  h1{
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-  }
- 
-  /* .input{
-    outline: none;
-    padding: 12px;
-    border-radius: 25px 0 0 25px;
-    width: 66%;
-    font-size: .9rem;
-    border: none;
-    
-  } */
-
-
-
-  
 }

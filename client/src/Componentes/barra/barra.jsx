@@ -41,7 +41,7 @@ export function Nav() {
           <ContainerRutas>
             <HomeIcon/>
             <Link to="/home">Home</Link>
-          </ContainerRutas>
+          </ContainerRutas> 
         
 
           <ContainerRutas>

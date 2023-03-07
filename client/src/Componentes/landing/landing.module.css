@@ -12,6 +12,24 @@
   justify-content: center;
 }
 
+  
+  
+.btn:hover{
+  transform: translate(0, 0)
+}
+/* 
+.btn::before{
+  content: '';
+  background: #282828;
+  border: 2px solid white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+   */
+    
 .btn {
   font-size: 1rem;
   text-align: center;
@@ -21,28 +39,17 @@
   padding: 10px 20px;
   margin-top: 20px;
   text-decoration: none;
+  transform: translate(-5%, -5%);
+  transition: transform 0.2s
 }
+
+
 
 .title {
   font-size: 2rem;
   color: white;
   text-align: center;
 }
-
-/* .title{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  font-size: 2em;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000;
-} */
-
-
-
 
 
 @media only screen and (max-width: 768px) {
@@ -53,11 +60,13 @@
 
 @media only screen and (max-width: 480px) {
   .title {
-    font-size: 1em;
+    font-size: 1.3em;
   }
-  .btn {
-    font-size: 0.5em;
+
+  .btn{
+    font-weight: 800;
   }
+ 
 }
 
 

@@ -3,58 +3,52 @@
 
 p{
     color: #00a5cf;
-    margin-left: 8px;
-  
-}
-
-/* h2{
-    display: flex;
-    align-items: center;
-    margin: 0;
-    font-size: 20px;
-    line-height: 0;
+    font-size: 0.7em;
     font-family: 'Montserrat', sans-serif;
-} */
-
+}
 
 .mainContainer{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
 .container{
-   margin-top: 2rem;
+   width: 100%;
    display: flex;
-   align-items: center;
    flex-direction: row;
-   justify-content: center;
-  
 }
 
-.details{
-  margin-right: 5rem;
+.subContainer{
+  /* border: #00a5cf solid 2px; */
+  /* padding-left: 5%; */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   width: 50%;
+  margin: 2rem 0 2rem 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.act{
-  width: 50%;
-  height: 400px;
-  
+.detailnTitle{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.5rem;
+}
+
+*{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .noActs{
   position: relative;
-  left: 10rem;
   top: 10rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.titleActivity{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .activities{
  color: black; 
@@ -75,44 +69,35 @@ p{
 
   @media screen and (max-width: 600px){
     .container{
-      margin-top: 2rem;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
-     
    }
 
-   .details{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* border: #00a5cf 2px solid; */
-    width: 100%;
-    margin-bottom: 2rem;
-    position: relative;
-    left: 2rem;
+  .subContainer{
+    min-height: 400px;
   }
 
-  .act{
-    width: 100%;
-   
-    display: flex;
-   
-    align-items: center;
-    flex-direction: column;
+  /* .detailnTitle{
+    font-size: 1.5em;
+  } */
+
+  .flag{
+    width: 200px;
   }
 
-  .noActs{
+  
+
+  /* .noActs{
     position: relative;
     left: 0rem;
     top: 4rem;
-  }
+  } */
 
-  .activities{
+  /* .activities{
     color: black; 
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
-   }
+   } */
   }

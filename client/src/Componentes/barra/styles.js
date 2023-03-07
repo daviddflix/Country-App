@@ -75,6 +75,8 @@ export const Menu = styled.ul`
 `;
 
 export const ContainerRutas = styled.li`
+
+
   @media screen and (max-width: 600px) {
     display: flex;
     justify-content: center;
@@ -87,14 +89,36 @@ export const ContainerRutas = styled.li`
 
 export const Link = styled(NavLink)`
   transition: 0.5s all ease;
+  position: relative;
   color: black;
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
   height: 100%;
   margin: 1rem;
+  padding: 5px;
   text-transform: capitalize;
   border-radius: 5px;
+  font-weight: 1000;
+
+  &::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+  }
+
+  &:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
+ }
 
   &:hover {
     transition: 0.5s all ease;

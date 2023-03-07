@@ -20,49 +20,49 @@ export function Detalle() {
       <Nav />
       {isLoading ? (
         <div className={s.container}>
-          <div className={s.details}>
-            <h2>
-              Country: <p>{detalle.name}</p>
+          <div className={s.subContainer}>
+            <h2 className={s.detailnTitle}>
+              Country<p>{detalle.name}</p>
             </h2>
-            <img src={detalle.flags} alt="flag" />
-            <h2>
-              Capital: <p>{detalle.capital}</p>
+            <img src={detalle.flags} className={s.flag} alt="flag" />
+            <h2 className={s.detailnTitle}>
+              Capital<p>{detalle.capital}</p> 
             </h2>
-            <h2>
-              Continent: <p>{detalle.continente}</p>
+            <h2 className={s.detailnTitle}>
+              Continent <p>{detalle.continente}</p>
             </h2>
-            <h2>
-              Population: <p>{nFormatter(detalle.population)}</p>
+            <h2 className={s.detailnTitle}>
+              Population <p>{nFormatter(detalle.population)}</p>
             </h2>
-            <h2>
-              Area: <p>{nFormatterArea(detalle.area)}</p>
+            <h2 className={s.detailnTitle}>
+              Area <p>{nFormatterArea(detalle.area)}</p>
             </h2>
-            <h2>
-              Subregion: <p>{detalle.subregion}</p>
+            <h2 className={s.detailnTitle}>
+              Subregion <p>{detalle.subregion}</p>
             </h2>
           </div>
 
-          <div className={s.act}>
-            <h2>Activities</h2>
-            <h2>
+          <div className={s.subContainer}>
+            <h2 className={s.titleActivity}>Activities</h2>
+            <h2 className={s.h2}>
               {detalle.activities.length === 0 ? (
-                <h2 className={s.noActs}>No Activities created yet</h2>
+                <h5 className={s.noActs}>No Activities created yet</h5>
               ) : (
                 detalle.activities.map((el) => {
                   return (
                     <div className={s.container_activity} key={el.id}>
-                      <h2 className={s.activities}>
+                      <h4 className={s.activities}>
                         Activity: <p>{el.nombre}</p>
-                      </h2>
-                      <h2 className={s.activities}>
+                      </h4>
+                      <h4 className={s.activities}>
                         Difficulty: <p>{el.dificultad} </p>
-                      </h2>
-                      <h2 className={s.activities}>
+                      </h4>
+                      <h4 className={s.activities}>
                         Duration: <p>{el.duracion} hs</p>
-                      </h2>
-                      <h2 className={s.activities}>
+                      </h4>
+                      <h4 className={s.activities}>
                         Season: <p>{el.temporada}</p>
-                      </h2>
+                      </h4>
                     </div>
                   );
                 })

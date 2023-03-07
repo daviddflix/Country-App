@@ -1,23 +1,26 @@
-# Countries
+# Countries of the World
 
-## Objetivos del Proyecto
+It is a simple app where you can find relevant information about the countries of the world.
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
-- Usar y practicar testing.
+## Installation
 
-### Endpoints
+Use the package manager [npm] to install all dependencies.
 
-  - GET https://restcountries.com/v3/all
-  - GET https://restcountries.com/v3/name/{name}
-  - GET https://restcountries.com/v3/alpha/{code}
+```bash
+npm install
+```
 
-### About:  
 
-Personal project where everyone can see and search for countries of the world, see their details, population, area and capital. it is also possible to create an activity for every country, describing type of activity, season and duration.
+## Contributing
 
-### URL: https://countyapp.vercel.app/home
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+### URL: [https://countyapp.vercel.app/home](https://countyapp.vercel.app/)
 
 
 
